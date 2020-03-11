@@ -4,6 +4,10 @@
 }
 
 @media screen and (max-width: 940px) {
+  .Misk hr {
+    width: 85%;
+  }
+
   .video {
     order: 2;
   }
@@ -70,12 +74,22 @@
     margin: auto;
   }
 
+  .OMG_Content {
+    width: 100%;
+  }
 
   .main_omg {
     width: 100%;
   }
 }
 @media screen and (min-width: 940px) {
+  .Misk hr {
+    position: relative;
+    bottom: 10px;
+    float: right;
+    width: 90%;
+  }
+
   .mainBlock-news-video {
     margin-bottom: 40px;
     display: flex;
@@ -221,6 +235,7 @@
   float: right;
   position: relative;
   bottom: 7px;
+  width: 75%;
 }
 
 .counter {
@@ -279,6 +294,7 @@
 .video h3 {
   margin-top: 15px;
   margin-left: 10px;
+  color: black;
 }
 
 #right_line {
@@ -353,7 +369,7 @@
 }
 
 #clipOfphoto {
-  background-image: url("clipped.png");
+  background-image: url("images/clipped.png");
   opacity: 0.4;
 }
 
@@ -422,10 +438,4 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-}
-
-.Misk hr {
-  position: relative;
-  bottom: 10px;
-  float: right;
 }

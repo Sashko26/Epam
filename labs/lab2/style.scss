@@ -1,9 +1,6 @@
 $FontFamily: "PT Sans";
 $FontWeight: 400;
 
-
-
-
 @mixin font {
   font-family: $FontFamily;
   font-weight: $FontWeight;
@@ -20,12 +17,18 @@ $FontWeight: 400;
 }
 
 @media screen and (max-width: 940px) {
+  .Misk {
+    hr {
+      width: 85%;
+    }
+  }
   .video {
     order: 2;
   }
   .content {
     margin: auto;
   }
+
   .video {
     width: 50%;
 
@@ -86,6 +89,16 @@ $FontWeight: 400;
 }
 
 @media screen and (min-width: 940px) {
+
+  .Misk {
+    hr {
+      position: relative;
+      bottom: 10px;
+      float: right;
+      width: 90%;
+    }
+  }
+  
   .mainBlock-news-video {
     margin-bottom: 40px;
     display: flex;
@@ -218,6 +231,7 @@ $FontWeight: 400;
   float: right;
   position: relative;
   bottom: 7px;
+  width: 75%;
 }
 .counter {
   position: relative;
@@ -253,7 +267,7 @@ $FontWeight: 400;
     color: #3d76cc;
     text-decoration: none;
     padding: 5px;
-      @include font;
+    @include font;
   }
   font-size: 12px;
 }
@@ -273,6 +287,7 @@ $FontWeight: 400;
   h3 {
     margin-top: 15px;
     margin-left: 10px;
+    color: black;
   }
 }
 
@@ -322,7 +337,7 @@ $FontWeight: 400;
   span {
     font-size: 6pt;
     color: #3d76cc;
-   @include font;
+    @include font;
     position: relative;
     height: 50px;
     margin-bottom: 15px;
@@ -343,7 +358,7 @@ $FontWeight: 400;
   right: 40%;
 }
 #clipOfphoto {
-  background-image: url("clipped.png");
+  background-image: url("images/clipped.png");
   opacity: 0.4;
 }
 .button {
@@ -406,10 +421,3 @@ $FontWeight: 400;
   width: 100%;
 }
 
-.Misk {
-  hr {
-    position: relative;
-    bottom: 10px;
-    float: right;
-  }
-}
