@@ -1,0 +1,28 @@
+aside {
+    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
+    float: right;
+   }
+   article {
+    margin-right: 240px;
+    display: block;
+   } 
+   .myClass {
+    color: white;
+    background-color: DodgerBlue;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+  }
+  #news
+  {
+    font-size: 10vh;
+  }
+  
+
+
+
+
+
+  
