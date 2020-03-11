@@ -1,17 +1,17 @@
 function future() {
-    let children = +prompt("Сколько детей хочешь, мммм?")
-    let professions = ["Бухгалтер", "Программист", "Художник", "Python developer"]
-    let profession = prompt("Кем хочешь быть?")
+    let children = prompt("Скільки дітей хочеш?")
+    let professions = ["Програміст", "Фермер", "Художник", "Маркетолог"]
+    let profession = prompt("Ким хочеш стати?")
     if (!professions.includes(profession)){
-        profession = "Работяга на заводе"
+        profession = "Працівник на заводі, який приходить з роботи і грає в танки."
     }
-    let cities = ["Киев", "Варшава", "Краков", "Прага", "Берлин"]
-    let city = prompt("В какой город хочешь?")
+    let cities = ["Київ", "Варшава", "Бершадь", "Нью-Йорк", "Баланівка"]
+    let city = prompt("В яке місто хочеш?")
     if (!cities.includes(city)){
-        profession = "Малиновка"
+        city = "Афіни"
     }
-    let partner_name = prompt("Введите имя партнера?")
-    alert(`Будешь жить в ${city}, работать ${profession} и у тебя с ${partner_name} будет ${children} детей`)
+    let partner_name = prompt("Введіть ім'я партнера?")
+    alert(`Будеш жити в ${city}, працювати ${profession} и в тебя з ${partner_name} будет ${children} детей`)
 }
 
 future()
