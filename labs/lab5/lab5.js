@@ -1,12 +1,26 @@
 
 
 let timesOfScrolling = 1;
-let amountOnThe
+
+function sleep(ms) {
+    ms += new Date().getTime();
+    while (new Date() < ms) { }
+}
+
 window.onscroll = function () {
     if (window.pageYOffset / timesOfScrolling >= window.innerHeight) {
-        timesOfScrolling++;
+
+        let loaderNodes = document.getElementsByClassName('loader');
+        if (loaderNodes) {
+            for (let i = 0; i < loaderNodes.length; i++) {
+                loaderNodes[i].remove();
+            }
+        }
+        sleep(2000);
         getPhotki(25);
+        timesOfScrolling++;
     }
+
 
 
 }
@@ -21,7 +35,6 @@ function getPhotki(amount) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let data = JSON.parse(xhr.responseText);
-            console.log(data.results[1].picture.large);
             return Promise.resolve(buildTheList(data));
         }
         else return Promise.reject("You have a problem!");
@@ -47,8 +60,10 @@ function buildTheList(data) {
             let img = document.createElement('img');
             img.setAttribute("src", data.results[i * 5 + j].picture.large);
             div.appendChild(img);
-
         }
     }
+    let loader = document.createElement("div");
+    document.body.appendChild(loader);
+    loader.className = "loader";
 
 }
