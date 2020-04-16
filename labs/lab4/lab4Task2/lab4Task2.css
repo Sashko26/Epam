@@ -1,0 +1,95 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+body {
+  text-align: center;
+}
+
+.color
+{
+  background-color: yellow;
+  font-size: green;
+}
+.footerOfDiagram
+{
+  height: 5vh;
+}
+
+
+/* #is
+{
+   width: 33.3%;
+   height:50%;
+   background-color: white;
+
+}
+#isnt
+{
+  width: 33.3%;
+  height:100%;
+  background-color:white;
+
+  
+}
+#is1
+{
+  width: 33.3%;
+  height:69%;
+  background-color:white;
+
+} */
+
+
+.error-style{
+  border : 4px solid red;
+}
+
+
+#canva
+{
+  
+  height: 50vh;
+  background-color: blue;
+  position: relative;
+  text-align: center;
+}
+
+#diagram
+{
+  border: 3px solid black;
+}
+
+#general
+{
+  padding: 20px;
+  color:white;
+  background-color: black;
+}
+#name
+{
+  
+}
+#surname
+{
+
+}
+.col-3{
+  padding:15px;
+}
+
+input
+{
+  margin:10px;
+}
+button
+{
+  outline: none;
+  background-color: transparent;
+  border: 1px solid skyblue;
+  padding:10px;
+  text-align: center;
+  border-radius:5px;
+  color: skyblue;
+
+}
