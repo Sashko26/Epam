@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="moment.js"></script>
+</head>
+<body>
+    <h1>Введите данные</h1>
+    <form id="form" action="/form" enctype="application/json" method="post">
+        <label>Email</label><br>
+        <input type="text" name="email" id="email" /><br><br>
+        <label>Name</label><br>
+        <input type="text" name="name" id="name" /><br><br>
+
+        <label>Message</label><br>
+        <input type="text" name="message" id="message"  /><br><br>
+        <input disabled type="submit" name="submit" id="submit" value="Отправить" />
+    </form>
+
+
+    <button id="getWorkers">get info about clerks.</button>
+
+
+    <div class="container">
+        <div class="timer">
+          <div id="timeScreen" class="screen">00:00</div>
+          <div class="buttons">
+            <button id="switch">GO/STOP</button>
+            <button id="reset">RESET</button>
+          </div>
+        </div>
+      </div>
+
+    <script src="frontEnd.js"></script>
+    <!-- <script src="moment.js"></script> -->
+</body>
+</html>
