@@ -109,24 +109,6 @@ window.onload = function () {
         console.log(moment().get('year'))
 
 
-        /*    moment().set('year', 2013);
-           moment().set('month', 3);  
-           moment().set('date', 1);
-           moment().set('hour', 13);
-           moment().set('minute', 20);
-           moment().set('second', 30);
-           moment().set('millisecond', 123);
-   
-   
-   
-           let time = moment().set({ 'year': 0, 'month': 0, 'date': 1, 'hour': 0, 'minute': 0, 'second': 0, 'millisecond': 0 }) */
-
-
-
-
-
-
-
         let time = 9;
         let conc = "0" + time;
         console.log(conc);

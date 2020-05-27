@@ -1,0 +1,84 @@
+
+<html>
+  <head>
+    <!-- Internal game scripts/styles, mostly boring stuff -->
+    <script src="https://xss-game.appspot.com/static/game-frame.js"></script>
+    <link rel="stylesheet" href="https://xss-game.appspot.com/static/game-frame-styles.css" />
+   
+  </head>
+
+ 
+  <body id="level6">
+    <img src="https://xss-game.appspot.com/static/logos/level6.png">
+    <img id="cube" src="https://xss-game.appspot.com/static/level6_cube.png">
+    <div id="log">Loading gadget...</div>
+  </body>
+  <script type="text/javascript" src ='gadget.js'></script>
+  <script>
+    function setInnerText(element, value) {
+      if (element.innerText) {
+        element.innerText = value;
+      } else {
+        element.textContent = value;
+      }
+    }
+ 
+    function includeGadget(url) {
+      var scriptEl = document.createElement('script');
+ 
+      // This will totally prevent us from loading evil URLs!
+         //ось що я добавив
+      if (url.match(/\/\//)) {
+        setInnerText(document.getElementById("log"),
+        "Sorry, cannot load a URL containing \"http\".");
+        return;
+      }
+      if(url.match(/data:text\/javascript/))
+      {
+        setInnerText(document.getElementById("log"),
+        "Sorry, but we know more than you!");
+        return;
+      }
+      if(url.match( /data:%20text%20\/%20javascript/))
+      {
+        setInnerText(document.getElementById("log"),
+        "Sorry, but we know more than you!");
+        return;
+      }
+
+
+     
+      
+      // Load this awesome gadget
+      scriptEl.src = url;
+      console.log(url);
+      // Show log messages
+      scriptEl.onload = function() { 
+        setInnerText(document.getElementById("log"),  
+          "Loaded gadget from " + url);
+      }
+      scriptEl.onerror = function() { 
+        setInnerText(document.getElementById("log"),  
+          "Couldn't load gadget from " + url);
+      }
+      
+      document.head.appendChild(scriptEl);
+    }
+ 
+    // Take the value after # and use it as the gadget filename.
+    function getGadgetName() { 
+      return window.location.hash.substr(1) || "/gadget.js";
+    }
+ 
+    includeGadget(getGadgetName());
+ 
+    // Extra code so that we can communicate with the parent page
+    window.addEventListener("message", function(event){
+      if (event.source == parent) {
+        includeGadget(getGadgetName());
+      }
+    }, false);
+    
+    </script>
+   
+</html>
